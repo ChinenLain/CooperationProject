@@ -25,6 +25,11 @@ public class DialogBoxManager : MonoBehaviour
         CharaPosition = new Dictionary<string, GameObject> { { "left", LeftChara }, { "mid", CenterChara }, { "right", RightChara } };
     }
 
+    private void Start()
+    {
+        //OpenDiglogBox("01", 0);//test
+    }
+
     public void LoadCharacter(string path, string pos)
     {
         Sprite TempSprite = (Sprite)Resources.Load("FG/" + path, typeof(Sprite));
@@ -91,5 +96,16 @@ public class DialogBoxManager : MonoBehaviour
         StopCoroutine("ShowDialogueCoroutine");
         this.CorText = text;
         StartCoroutine("ShowDialogueCoroutine");
+    }
+
+    public void OpenDiglogBox(string filename,int index)
+    {
+        DialogueBoxPanel.SetActive(true);
+        TextParser.instance.GetText(filename, index);
+    }
+
+    public void CloseDiglogBox()
+    {
+        DialogueBoxPanel.active = false;
     }
 }

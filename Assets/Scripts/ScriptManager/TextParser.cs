@@ -16,7 +16,7 @@ public class TextParser : MonoBehaviour
 
     private void Start()
     {
-        GetText("01", 0);
+        
     }
     public void GetText(string name, int index)
     {

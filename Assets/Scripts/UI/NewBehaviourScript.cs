@@ -14,7 +14,15 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else
         {
-            TextParser.instance.ParsingText(TextParser.instance.LineIndex);
+            if (TextParser.instance.LineIndex >= TextParser.instance.TextLines.Length)
+            {
+                DialogBoxManager.instance.CloseDiglogBox();
+            }
+            else
+            {
+                TextParser.instance.ParsingText(TextParser.instance.LineIndex);
+
+            }
         }
     }
 }

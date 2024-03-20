@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\2DCameraController.cs" />
+    <Compile Include="Assets\Scripts\Map\Game01.cs" />
     <Compile Include="Assets\Scripts\ScriptManager\TextParser.cs" />
     <Compile Include="Assets\Scripts\UI\SettingButton.cs" />
     <Compile Include="Assets\Scripts\ScriptManager\GlobalVariables.cs" />
