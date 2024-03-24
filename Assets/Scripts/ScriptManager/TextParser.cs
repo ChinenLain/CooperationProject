@@ -9,6 +9,7 @@ public class TextParser : MonoBehaviour
     public string[] TempScript;
     public string TextFileName;
     public int LineIndex;
+
     private void Awake()
     {
         instance = this;
@@ -47,8 +48,7 @@ public class TextParser : MonoBehaviour
             if (TempScript[1] == "setbg")
             {
                 Debug.Log("setbackground");
-                //Background switch process
-                // (Set Background Method)
+                
             }
             else if (TempScript[1] == "setfg")
             {
@@ -68,6 +68,7 @@ public class TextParser : MonoBehaviour
             else if (TempScript[1] == "setbgm")
             {
                 Debug.Log("setbgm");
+                DialogBoxManager.instance.SetBGM(TempScript[2]);
             }
             else if (TempScript[1] == "stopbgm")
             {

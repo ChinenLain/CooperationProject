@@ -70,8 +70,8 @@
     <Compile Include="Assets\Scripts\UI\BackButton.cs" />
     <Compile Include="Assets\Scripts\UI\SettingPanel.cs" />
     <Compile Include="Assets\Scripts\ScriptManager\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\UI\NextButton.cs" />
     <Compile Include="Assets\Scripts\ScriptManager\GameArchive.cs" />
-    <Compile Include="Assets\Scripts\UI\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\UI\StartScene.cs" />
     <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />

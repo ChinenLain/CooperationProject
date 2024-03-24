@@ -9,15 +9,17 @@ public class DialogBoxManager : MonoBehaviour
     public static DialogBoxManager instance;
     public TextMeshProUGUI SpeakerName;
     public TextMeshProUGUI TalkText;
-    public GameObject Img_Background;//background image
-    public GameObject LeftChara, CenterChara, RightChara;//characters
+    public GameObject Img_Background;
+    public GameObject LeftChara, CenterChara, RightChara;
     public GameObject DialogueBoxPanel;
-    public Dictionary<string, GameObject> CharaPosition;//match character position
+    public Dictionary<string, GameObject> CharaPosition;
 
-    public bool ShowTalkText;//judge if display complete
+    public bool ShowTalkText;
     public string TempText;
     public string CorText;
     public float TextSpeed = 10.0f;
+
+    public GameObject GameManager;
 
     private void Awake()
     {
@@ -27,16 +29,21 @@ public class DialogBoxManager : MonoBehaviour
 
     private void Start()
     {
-        //OpenDiglogBox("01", 0);//test
+        GameManager = GameObject.Find("GameManager");
     }
 
     public void LoadCharacter(string path, string pos)
     {
-        Sprite TempSprite = (Sprite)Resources.Load("FG/" + path, typeof(Sprite));
+        Sprite TempSprite = (Sprite)Resources.Load("Img/FG/" + path, typeof(Sprite));
         GameObject character = CharaPosition[pos];
-        //initialize sprite
         character.GetComponent<Image>().sprite = TempSprite;
         character.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+    }
+
+    public void SetBGM(string path)
+    {
+        AudioClip TempClip = (AudioClip)Resources.Load("Music/" + path, typeof(AudioClip));
+        GameManager.GetComponent<AudioManager>().SetBGM(TempClip, 0);
     }
 
     //method to control character display( on ->display off->erase)
@@ -84,7 +91,6 @@ public class DialogBoxManager : MonoBehaviour
         for (int i = 0; i < CorText.Length; i++)
         {
             TempText += CorText[i];
-            //update temptext
             this.TalkText.text = TempText;
             yield return new WaitForSeconds(1 / TextSpeed);
         }
@@ -106,6 +112,6 @@ public class DialogBoxManager : MonoBehaviour
 
     public void CloseDiglogBox()
     {
-        DialogueBoxPanel.active = false;
+        DialogueBoxPanel.SetActive(false);
     }
 }
