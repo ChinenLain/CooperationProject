@@ -638,8 +638,8 @@ Canvas:
   m_GameObject: {fileID: 954469025}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 553438054}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1113,14 +1113,14 @@ RectTransform:
   - {fileID: 2092014330}
   - {fileID: 1506211551}
   - {fileID: 1873138344}
-  - {fileID: 847455292}
   - {fileID: 918229925}
+  - {fileID: 847455292}
   m_Father: {fileID: 954469029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919758666
 MonoBehaviour:
@@ -1202,10 +1202,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1919758665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092014331
 MonoBehaviour:
@@ -1261,18 +1261,18 @@ PrefabInstance:
     - target: {fileID: 2580339830610015153, guid: 613b20b37350ce840abfa4d6d0776664, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 254162d013ac1a74498389fc8ed1fd77, type: 3}
+      objectReference: {fileID: 21300000, guid: 02a034cbaf9e1624a98c23ba46ddab73, type: 3}
     - target: {fileID: 2580339830610015153, guid: 613b20b37350ce840abfa4d6d0776664, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2580339830610015153, guid: 613b20b37350ce840abfa4d6d0776664, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2580339830610015153, guid: 613b20b37350ce840abfa4d6d0776664, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3920187577540972551, guid: 613b20b37350ce840abfa4d6d0776664, type: 3}
       propertyPath: m_Pivot.x

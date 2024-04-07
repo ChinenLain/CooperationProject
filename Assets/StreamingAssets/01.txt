@@ -1,6 +1,6 @@
 ﻿C|setbgm|bgm02
 C|setfg|left|marisa|15
-S|Marisa|这是一句话用来测试，字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字换行测试换行测试换行测试
+S|Marisa|这是一句话用来\n测试，字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字换行测试换行测试换行测试
 C|setfg|left|marisa|02
 C|setfg|right|reimu|Normal
 S|灵梦|添加立绘测试
